@@ -2,7 +2,11 @@
 
 echo "This script is going to add to this folder all the files required to start Vagrant - for Wonderflow dev environment"
 
-URL_TO_VAGRANT_FOLDER="https://bitliner@bitbucket.org/wonderflow-devops/vagrant.git"
+URL_TO_VAGRANT_FOLDER=""
+
+if [[ "$URL_TO_VAGRANT_FOLDER" == "" ]]; then
+	"Please specify an online repository URL where to download the files from"
+fi
 
 which vagrant >> /dev/null
 
