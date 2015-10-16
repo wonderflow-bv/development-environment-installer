@@ -4,5 +4,5 @@ This script installs a development environment based on Vagrant in the current f
 
 # Usage
 
-wget | bash
+wget https://raw.githubusercontent.com/wonderflow-bv/development-environment-installer/master/development-environment-installer.sh | bash
 
