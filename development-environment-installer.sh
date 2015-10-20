@@ -11,9 +11,14 @@ fi
 which vagrant >> /dev/null
 
 if [[ $? -eq 0 ]]; then
-	wget -r --no-parent "$URL_TO_VAGRANT_FOLDER"
+	mkdir .vagrant
+	wget "$URL_TO_VAGRANT_FOLDER" -O tmp.zip  && unzip  -d .vagrant tmp.zip  
+	cp -r .vagrant/**/* ./
+	rm tmp.zip
+	rm -r .vagrant
 else
 	echo 'Please install Vagrant first'
 	echo 'You can download Vagrant from: https://www.vagrantup.com/downloads.html'
 fi
+
 
